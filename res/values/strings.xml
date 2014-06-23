@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- main -->
+    <string name="personalinfo">基本资料</string>
+    <string name="education">教育背景</string>
+    <string name="workexp">工作经历</string>
+    <string name="projectexp">项目经验</string>
+    <string name="skill">专业技能</string>
+    <string name="certificate">拥有证书</string>
+    <string name="evaluation">个人评价</string>
+    
+    
+    
+	<!-- info -->
+    <string name="app_name">我的简历</string>
+    <string name="phone">手机:</string>
+    <string name="number">15882068471</string>
+    <string name="dial">电话联系</string>
+    <string name="alert">电话不能为空!</string>
+    
+    <string name="dataName">数据库名称</string>
+    <string name="create">创建</string>
+    
+    <!-- 拨号页面 -->
+    <string name="call_phone">拨号页面</string>
+    <string name="inputNumber">手机</string>
+    
+    
+</resources>

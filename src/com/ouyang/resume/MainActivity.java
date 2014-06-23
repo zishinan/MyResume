@@ -1,0 +1,205 @@
+package com.ouyang.resume;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import com.ouyang.demo.CallActivity;
+
+import android.app.Activity;
+import android.content.ClipData.Item;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends Activity
+{
+//	private DataBaseService service;
+	private static final String tag = "MainActivity";
+	
+	private Button bt_personinfo;
+	private Button bt_education;
+	private Button bt_workExp;
+	private Button bt_projectExp;
+	private Button bt_skill;
+	private Button bt_certificate;
+	private Button bt_evaluation;
+	
+	private Item ite_call_phone;
+	
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		getMenuInflater().inflate(R.menu.main, menu);
+		
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		Intent intent = new Intent();
+		intent.setClass(MainActivity.this, CallActivity.class);
+		startActivity(intent);
+		return false;
+	}
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+
+//		service = new DataBaseService(this);
+//		service.createDataBase("resume");
+		setContentView(R.layout.main);
+		
+//		Log.i(tag, "resume database created!");
+		Log.i(tag, "main activity created!");
+
+		bt_certificate = (Button) findViewById(R.id.bt_certificate);
+		bt_education = (Button) findViewById(R.id.bt_education);
+		bt_evaluation = (Button) findViewById(R.id.bt_evaluation);
+		bt_personinfo = (Button) findViewById(R.id.bt_personalinfo);
+		bt_projectExp = (Button) findViewById(R.id.bt_projectexp);
+		bt_skill = (Button) findViewById(R.id.bt_skill);
+		bt_workExp = (Button) findViewById(R.id.bt_workexp);
+		
+		bt_certificate.setOnClickListener(clickListener);
+		bt_education.setOnClickListener(clickListener);
+		bt_evaluation.setOnClickListener(clickListener);
+		bt_personinfo.setOnClickListener(clickListener);
+		bt_projectExp.setOnClickListener(clickListener);
+		bt_skill.setOnClickListener(clickListener);
+		bt_workExp.setOnClickListener(clickListener);
+	}
+	
+	View.OnClickListener clickListener = new View.OnClickListener()
+	{
+		@Override
+		public void onClick(View v)
+		{
+			int viewId = v.getId();
+			switch (viewId)
+			{
+			case R.id.bt_personalinfo:
+				clickPersonalinfo(v);
+				break;
+			case R.id.bt_certificate:
+				clickCertificate(v);
+				break;
+			case R.id.bt_education:
+				clickEducation(v);
+				break;
+			case R.id.bt_evaluation:
+				clickEvaluation(v);
+				break;
+			case R.id.bt_projectexp:
+				clickProjectExp(v);
+				break;
+			case R.id.bt_workexp:
+				clickWorkExp(v);
+				break;
+			case R.id.bt_skill:
+				clickSkill(v);
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
+
+	public void clickPersonalinfo(View source)
+	{
+		Intent intent = new Intent();
+		intent.setClass(MainActivity.this, PersonalInfoActivity.class);
+		startActivity(intent);
+	}
+
+	public void clickEducation(View source)
+	{
+		Intent intent = new Intent();
+		intent.setClass(MainActivity.this, EducationActivity.class);
+		startActivity(intent);
+	}
+
+	public void clickWorkExp(View source)
+	{
+		Intent intent = new Intent();
+		intent.setClass(MainActivity.this, WorkExpActivity.class);
+		startActivity(intent);
+	}
+
+	public void clickProjectExp(View source)
+	{
+		Intent intent = new Intent();
+		intent.setClass(MainActivity.this, ProjectExpActivity.class);
+		startActivity(intent);
+	}
+
+	public void clickSkill(View source)
+	{
+		Intent intent = new Intent();
+		intent.setClass(MainActivity.this, SkillActivity.class);
+		startActivity(intent);
+	}
+
+	public void clickCertificate(View source)
+	{
+		Intent intent = new Intent();
+		intent.setClass(MainActivity.this, CertificateActivity.class);
+		startActivity(intent);
+	}
+
+	public void clickEvaluation(View source)
+	{
+		Intent intent = new Intent();
+		intent.setClass(MainActivity.this, EvaluationActivity.class);
+		startActivity(intent);
+	}
+
+	private static boolean isExit = false;
+	private static boolean hasTask = false;
+	Timer tExit = new Timer();
+	TimerTask task = new TimerTask()
+	{
+		@Override
+		public void run()
+		{
+			isExit = false;
+			hasTask = true;
+		}
+	};
+
+	/* 
+	 * 连续点击两次返回键退出
+	 */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event)
+	{
+		if (keyCode == KeyEvent.KEYCODE_BACK)
+		{
+			if (isExit == false)
+			{
+				isExit = true;
+				Toast.makeText(this, "再按一次退出！", Toast.LENGTH_SHORT).show();
+				if (!hasTask)
+				{
+					tExit.schedule(task, 2000);
+				}
+			}
+			else
+			{
+				finish();
+				System.exit(0);
+			}
+		}
+		return false;
+	}
+}
