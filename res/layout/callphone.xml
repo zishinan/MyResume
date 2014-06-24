@@ -5,11 +5,14 @@
     
 	<TextView android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="@string/inputNumber" />
+	    android:text="@string/inputNumber"/>
+  
 	<EditText android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:id="@+id/number"/>
+	    android:id="@+id/edt_number"/>
+  
 	<Button android:id="@+id/bt_call"
 	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"/>
+	    android:layout_height="wrap_content"
+        android:text="@string/commitText"/>
 </LinearLayout>

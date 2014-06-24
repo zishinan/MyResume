@@ -23,8 +23,11 @@
     <string name="create">创建</string>
     
     <!-- 拨号页面 -->
-    <string name="call_phone">拨号页面</string>
+    <string name="callPhone">拨号页面</string>
+    <string name="sendMsg">短信页面</string>
     <string name="inputNumber">手机</string>
+    <string name="commitText">确定</string>
+    <string name="content">信息</string>
     
     
 </resources>

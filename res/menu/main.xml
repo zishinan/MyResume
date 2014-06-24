@@ -1,9 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/call_phone"
+        android:id="@+id/itm_callPhone"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/call_phone"/>
+        android:title="@string/callPhone"/>
+    <item
+        android:id="@+id/itm_sendMsg"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/sendMsg"/>
 
 </menu>

@@ -4,6 +4,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.ouyang.demo.CallActivity;
+import com.ouyang.demo.MsgActivity;
 
 import android.app.Activity;
 import android.content.ClipData.Item;
@@ -30,24 +31,34 @@ public class MainActivity extends Activity
 	private Button bt_certificate;
 	private Button bt_evaluation;
 	
-	private Item ite_call_phone;
-	
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
 		getMenuInflater().inflate(R.menu.main, menu);
 		
-		return true;
+		return super.onCreateOptionsMenu(menu);
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
 		Intent intent = new Intent();
-		intent.setClass(MainActivity.this, CallActivity.class);
-		startActivity(intent);
-		return false;
+		int id = item.getItemId();
+		switch (id)
+    {
+      case R.id.itm_callPhone:
+        intent.setClass(MainActivity.this, CallActivity.class);
+        startActivity(intent);
+        break;
+      case R.id.itm_sendMsg:
+        intent.setClass(MainActivity.this, MsgActivity.class);
+        startActivity(intent);
+        break;
+
+      default:
+        break;
+    }
+		return super.onOptionsItemSelected(item);
 	}
 	
 	@Override
