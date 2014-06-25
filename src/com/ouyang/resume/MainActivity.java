@@ -4,6 +4,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.ouyang.demo.CallActivity;
+import com.ouyang.demo.FileTestActivity;
 import com.ouyang.demo.MsgActivity;
 
 import android.app.Activity;
@@ -52,6 +53,10 @@ public class MainActivity extends Activity
         break;
       case R.id.itm_sendMsg:
         intent.setClass(MainActivity.this, MsgActivity.class);
+        startActivity(intent);
+        break;
+      case R.id.itm_filePage:
+        intent.setClass(MainActivity.this, FileTestActivity.class);
         startActivity(intent);
         break;
 

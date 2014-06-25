@@ -24,32 +24,36 @@ public final class R {
     }
     public static final class id {
         public static final int bt_call=0x7f080001;
-        public static final int bt_certificate=0x7f080008;
-        public static final int bt_dial=0x7f080002;
-        public static final int bt_education=0x7f080004;
-        public static final int bt_evaluation=0x7f080009;
-        public static final int bt_personalinfo=0x7f080003;
-        public static final int bt_projectexp=0x7f080006;
-        public static final int bt_skill=0x7f080007;
-        public static final int bt_workexp=0x7f080005;
-        public static final int btn_sms=0x7f08000c;
-        public static final int edt_content=0x7f08000b;
+        public static final int bt_certificate=0x7f08000a;
+        public static final int bt_dial=0x7f080004;
+        public static final int bt_education=0x7f080006;
+        public static final int bt_evaluation=0x7f08000b;
+        public static final int bt_personalinfo=0x7f080005;
+        public static final int bt_projectexp=0x7f080008;
+        public static final int bt_skill=0x7f080009;
+        public static final int bt_workexp=0x7f080007;
+        public static final int btn_readFile=0x7f080003;
+        public static final int btn_sms=0x7f08000e;
+        public static final int btn_writeFile=0x7f080002;
+        public static final int edt_content=0x7f08000d;
         public static final int edt_number=0x7f080000;
-        public static final int edt_phone=0x7f08000a;
-        public static final int itm_callPhone=0x7f08000d;
-        public static final int itm_sendMsg=0x7f08000e;
+        public static final int edt_phone=0x7f08000c;
+        public static final int itm_callPhone=0x7f08000f;
+        public static final int itm_filePage=0x7f080011;
+        public static final int itm_sendMsg=0x7f080010;
     }
     public static final class layout {
         public static final int callphone=0x7f030000;
         public static final int certificate=0x7f030001;
         public static final int education=0x7f030002;
         public static final int evaluation=0x7f030003;
-        public static final int info=0x7f030004;
-        public static final int main=0x7f030005;
-        public static final int projectxp=0x7f030006;
-        public static final int sendmsg=0x7f030007;
-        public static final int skill=0x7f030008;
-        public static final int workep=0x7f030009;
+        public static final int filetest=0x7f030004;
+        public static final int info=0x7f030005;
+        public static final int main=0x7f030006;
+        public static final int projectxp=0x7f030007;
+        public static final int sendmsg=0x7f030008;
+        public static final int skill=0x7f030009;
+        public static final int workep=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -59,27 +63,30 @@ public final class R {
         /**  info 
          */
         public static final int app_name=0x7f050007;
-        /**  拨号页面 
+        /**  demo 
          */
         public static final int callPhone=0x7f05000e;
         public static final int certificate=0x7f050005;
-        public static final int commitText=0x7f050011;
-        public static final int content=0x7f050012;
+        public static final int commitText=0x7f050012;
+        public static final int content=0x7f050013;
         public static final int create=0x7f05000d;
         public static final int dataName=0x7f05000c;
         public static final int dial=0x7f05000a;
         public static final int education=0x7f050001;
         public static final int evaluation=0x7f050006;
-        public static final int inputNumber=0x7f050010;
+        public static final int filePage=0x7f050010;
+        public static final int inputNumber=0x7f050011;
         public static final int number=0x7f050009;
         /**  main 
          */
         public static final int personalinfo=0x7f050000;
         public static final int phone=0x7f050008;
         public static final int projectexp=0x7f050003;
+        public static final int readFile=0x7f050015;
         public static final int sendMsg=0x7f05000f;
         public static final int skill=0x7f050004;
         public static final int workexp=0x7f050002;
+        public static final int writeFile=0x7f050014;
     }
     public static final class style {
         /** 

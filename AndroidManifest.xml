@@ -20,6 +20,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <!-- 单元测试 -->
         <uses-library android:name="android.test.runner"/>
         
         <activity
@@ -65,6 +66,10 @@
         <activity
             android:name="com.ouyang.demo.MsgActivity"
             android:label="@string/sendMsg" >
+        </activity>
+        <activity
+            android:name="com.ouyang.demo.FileTestActivity"
+            android:label="@string/filePage" >
         </activity>
         
     </application>

@@ -10,5 +10,10 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/sendMsg"/>
+    <item
+        android:id="@+id/itm_filePage"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/filePage"/>
 
 </menu>

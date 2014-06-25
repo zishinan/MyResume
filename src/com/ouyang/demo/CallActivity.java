@@ -13,7 +13,6 @@ import com.ouyang.resume.R;
 
 public class CallActivity extends Activity
 {
-//	private DataBaseService service;
   private void debugLog(Object msg)
   {
     Log.i("debugInfo", msg + "");
@@ -27,8 +26,6 @@ public class CallActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 
-//		service = new DataBaseService(this);
-//		service.createDataBase("resume");
 		setContentView(R.layout.callphone);
 		
 		bt_call = (Button) findViewById(R.id.bt_call);

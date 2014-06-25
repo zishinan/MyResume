@@ -22,12 +22,15 @@
     <string name="dataName">数据库名称</string>
     <string name="create">创建</string>
     
-    <!-- 拨号页面 -->
+    <!-- demo -->
     <string name="callPhone">拨号页面</string>
     <string name="sendMsg">短信页面</string>
+    <string name="filePage">文件操作</string>
     <string name="inputNumber">手机</string>
     <string name="commitText">确定</string>
     <string name="content">信息</string>
+    <string name="writeFile">写入文件</string>
+    <string name="readFile">读取文件</string>
     
     
 </resources>
