@@ -31,6 +31,10 @@
     <string name="content">信息</string>
     <string name="writeFile">写入文件</string>
     <string name="readFile">读取文件</string>
+    <string name="sdOpen">创建sd卡文件</string>
+    <string name="sax">sax解析</string>
+    <string name="setting">弹出对话框</string>
+    <string name="settingText">设置</string>
     
     
 </resources>

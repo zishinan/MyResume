@@ -24,23 +24,26 @@ public final class R {
     }
     public static final class id {
         public static final int bt_call=0x7f080001;
-        public static final int bt_certificate=0x7f08000a;
-        public static final int bt_dial=0x7f080004;
-        public static final int bt_education=0x7f080006;
-        public static final int bt_evaluation=0x7f08000b;
-        public static final int bt_personalinfo=0x7f080005;
-        public static final int bt_projectexp=0x7f080008;
-        public static final int bt_skill=0x7f080009;
-        public static final int bt_workexp=0x7f080007;
+        public static final int bt_certificate=0x7f08000d;
+        public static final int bt_dial=0x7f080007;
+        public static final int bt_education=0x7f080009;
+        public static final int bt_evaluation=0x7f08000e;
+        public static final int bt_personalinfo=0x7f080008;
+        public static final int bt_projectexp=0x7f08000b;
+        public static final int bt_skill=0x7f08000c;
+        public static final int bt_workexp=0x7f08000a;
         public static final int btn_readFile=0x7f080003;
-        public static final int btn_sms=0x7f08000e;
+        public static final int btn_sax=0x7f080005;
+        public static final int btn_sdOpen=0x7f080004;
+        public static final int btn_setting=0x7f080006;
+        public static final int btn_sms=0x7f080011;
         public static final int btn_writeFile=0x7f080002;
-        public static final int edt_content=0x7f08000d;
+        public static final int edt_content=0x7f080010;
         public static final int edt_number=0x7f080000;
-        public static final int edt_phone=0x7f08000c;
-        public static final int itm_callPhone=0x7f08000f;
-        public static final int itm_filePage=0x7f080011;
-        public static final int itm_sendMsg=0x7f080010;
+        public static final int edt_phone=0x7f08000f;
+        public static final int itm_callPhone=0x7f080012;
+        public static final int itm_filePage=0x7f080014;
+        public static final int itm_sendMsg=0x7f080013;
     }
     public static final class layout {
         public static final int callphone=0x7f030000;
@@ -83,7 +86,11 @@ public final class R {
         public static final int phone=0x7f050008;
         public static final int projectexp=0x7f050003;
         public static final int readFile=0x7f050015;
+        public static final int sax=0x7f050017;
+        public static final int sdOpen=0x7f050016;
         public static final int sendMsg=0x7f05000f;
+        public static final int setting=0x7f050018;
+        public static final int settingText=0x7f050019;
         public static final int skill=0x7f050004;
         public static final int workexp=0x7f050002;
         public static final int writeFile=0x7f050014;
