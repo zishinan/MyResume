@@ -6,24 +6,21 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
 import javax.xml.parsers.SAXParserFactory;
-import android.R.bool;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.ClipData.Item;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnDismissListener;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 import com.ouyang.resume.R;
 
 public class FileTestActivity extends Activity
@@ -104,13 +101,13 @@ public class FileTestActivity extends Activity
   };
   
   
-  @Override
+  /*@Override
   public boolean onCreateOptionsMenu(Menu menu)
   {
     // TODO 初始化的时候也会弹出 暂不处理
     builder.show();
     return false;
-  }
+  }*/
 
   /**
    * 写文件操作

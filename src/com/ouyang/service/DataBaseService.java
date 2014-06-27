@@ -11,9 +11,20 @@ public class DataBaseService
 	{
 		this.context = context;
 	}
+	
+	private boolean dataBaseExisted()
+  {
+    
+    return true;
+  }
+	
 	public void createDataBase(String name)
 	{
+	  if (dataBaseExisted())
+    {
+      return;
+    }
 		context.openOrCreateDatabase(name, Context.MODE_PRIVATE, null);
-//		SQLiteDatabase.openOrCreateDatabase("data/data/com.ouyang.resume/haha", null);
+		SQLiteDatabase.openOrCreateDatabase("data/data/com.ouyang.resume/haha", null);
 	}
 }

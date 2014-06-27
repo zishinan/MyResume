@@ -3,12 +3,7 @@ package com.ouyang.resume;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.ouyang.demo.CallActivity;
-import com.ouyang.demo.FileTestActivity;
-import com.ouyang.demo.MsgActivity;
-
 import android.app.Activity;
-import android.content.ClipData.Item;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,11 +14,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.ouyang.demo.CallActivity;
+import com.ouyang.demo.FileTestActivity;
+import com.ouyang.demo.MsgActivity;
+import com.ouyang.service.DataBaseService;
+
 public class MainActivity extends Activity
 {
-//	private DataBaseService service;
-	private static final String tag = "MainActivity";
-	
+  @SuppressWarnings("unused")
+  private void debugLog(Object msg)
+  {
+    Log.i("debugInfo", msg + "");
+  }
+	private DataBaseService service;
 	private Button bt_personinfo;
 	private Button bt_education;
 	private Button bt_workExp;
@@ -31,6 +34,38 @@ public class MainActivity extends Activity
 	private Button bt_skill;
 	private Button bt_certificate;
 	private Button bt_evaluation;
+	
+	@Override
+  protected void onCreate(Bundle savedInstanceState)
+  {
+    super.onCreate(savedInstanceState);
+
+    service = new DataBaseService(this);
+    service.createDataBase("resume");
+    setContentView(R.layout.main);
+    
+    bt_certificate = (Button) findViewById(R.id.bt_certificate);
+    bt_education = (Button) findViewById(R.id.bt_education);
+    bt_evaluation = (Button) findViewById(R.id.bt_evaluation);
+    bt_personinfo = (Button) findViewById(R.id.bt_personalinfo);
+    bt_projectExp = (Button) findViewById(R.id.bt_projectexp);
+    bt_skill = (Button) findViewById(R.id.bt_skill);
+    bt_workExp = (Button) findViewById(R.id.bt_workexp);
+    
+    bt_certificate.setOnClickListener(clickListener);
+    bt_education.setOnClickListener(clickListener);
+    bt_evaluation.setOnClickListener(clickListener);
+    bt_personinfo.setOnClickListener(clickListener);
+    bt_projectExp.setOnClickListener(clickListener);
+    bt_skill.setOnClickListener(clickListener);
+    bt_workExp.setOnClickListener(clickListener);
+  }
+	
+	private void createDatabase()
+  {
+    service = new DataBaseService(this);
+    service.createDataBase("resume");
+  }
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
@@ -66,34 +101,6 @@ public class MainActivity extends Activity
 		return super.onOptionsItemSelected(item);
 	}
 	
-	@Override
-	protected void onCreate(Bundle savedInstanceState)
-	{
-		super.onCreate(savedInstanceState);
-
-//		service = new DataBaseService(this);
-//		service.createDataBase("resume");
-		setContentView(R.layout.main);
-		
-//		Log.i(tag, "resume database created!");
-		Log.i(tag, "main activity created!");
-
-		bt_certificate = (Button) findViewById(R.id.bt_certificate);
-		bt_education = (Button) findViewById(R.id.bt_education);
-		bt_evaluation = (Button) findViewById(R.id.bt_evaluation);
-		bt_personinfo = (Button) findViewById(R.id.bt_personalinfo);
-		bt_projectExp = (Button) findViewById(R.id.bt_projectexp);
-		bt_skill = (Button) findViewById(R.id.bt_skill);
-		bt_workExp = (Button) findViewById(R.id.bt_workexp);
-		
-		bt_certificate.setOnClickListener(clickListener);
-		bt_education.setOnClickListener(clickListener);
-		bt_evaluation.setOnClickListener(clickListener);
-		bt_personinfo.setOnClickListener(clickListener);
-		bt_projectExp.setOnClickListener(clickListener);
-		bt_skill.setOnClickListener(clickListener);
-		bt_workExp.setOnClickListener(clickListener);
-	}
 	
 	View.OnClickListener clickListener = new View.OnClickListener()
 	{

@@ -17,6 +17,7 @@ import com.ouyang.resume.R;
 
 public class MsgActivity extends Activity
 {
+  @SuppressWarnings("unused")
   private void debugLog(Object msg)
   {
     Log.i("debugInfo", msg + "");
